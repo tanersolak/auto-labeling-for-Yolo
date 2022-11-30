@@ -1,10 +1,11 @@
 import glob
 
-dir_path = 'data/'  # Your images should be here!
+dir_path = 'data/'        # Path for images
 img = f"{dir_path}*.jpg"
-weights = glob.glob("yolo/*.weights")[0]
-labels = glob.glob("yolo/*.txt")[0]
-cfg = glob.glob("yolo/*.cfg")[0]
+
+weights = glob.glob("yolo/*.weights")[0]  # Path for weights
+labels = glob.glob("yolo/*.txt")[0]       # Path for labels
+cfg = glob.glob("yolo/*.cfg")[0]          # Path for cfg
 
 CONFIDENCE_THRESHOLD = 0.30
 NMS_THRESHOLD = 0.4
